@@ -4,6 +4,7 @@ const code = require('./codeModel')
 const remarks = require('./remarkModel')
 const mongoose = require('mongoose')
 const uid = require('uid')
+const port = process.env.PORT || 8080
 
 mongoose.connect('mongodb://userman123:userman123@ds157256.mlab.com:57256/elite', { useNewUrlParser: true })
 const db = mongoose.connection
