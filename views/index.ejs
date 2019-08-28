@@ -35,16 +35,16 @@
 		<div id="body">
 			<div class="container">
 
-				<% data.forEach(function(i){ %>
+				<%for(let i=data.length-1;i>=0;i--){%>
 					<div class="item">
 							<div class="name">
-								<%=i.fullname%>
+								<%=data[i].fullname%>
 							</div>
 							<div class="text">
-								<%=i.remark%>
+								<%=data[i].remark%>
 							</div>
 					</div>
-				<% }) %>
+				<%}%>
 				
 
 			</div>
