@@ -21,6 +21,9 @@ $(document).ready(function(){
 			success: function(res){
 				if(res.done){
 					$(".modal_container").text("Thank you for your remarks");
+					setTimeout(function(){
+						window.location = '/'
+					},3000)
 				}else{
 					$(".modal_container").text("Invalid Code");
 				}
