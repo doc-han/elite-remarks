@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+		<header>
+			<span>EliTe Last Remarks</span>
+		</header>
+	
+		<div class="modal_bg">
+			<div class="modal_container">
+				<div id="allcont">
+						<input id="code" type="text" name="" placeholder="code">
+						<input id="fullname" type="text" name="" placeholder="Fullname">
+						<textarea name="" id="remarks" cols="30" rows="4" placeholder="Remarks"></textarea>
+						<input id="submit-btn" type="button" value="Submit" style="background-color: #f44336; color: #fff; cursor: pointer">
+						<input id="cancel-btn" type="button" value="Cancel" style="background-color: #607d8b; color: #fff; cursor: pointer">
+						
+				</div>
+			</div>
+		</div>
+
+
+		<div id="add">
+			Add Remarks
+		</div>
+
+		<div id="body">
+			<div class="container">
+
+				<% data.forEach(function(i){ %>
+					<div class="item">
+							<div class="name">
+								<%=i.fullname%>
+							</div>
+							<div class="text">
+								<%=i.remark%>
+							</div>
+					</div>
+				<% }) %>
+				
+
+			</div>
+		</div>
+</body>
+</html>
