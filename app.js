@@ -36,7 +36,10 @@ app.post('/', (req,res)=>{
 			})
 			console.log(newRemark)
 			newRemark.save()
-			res.json({done: true})
+			code.findOneAndRemove({code: req.body.code})
+			.then(data=>{
+				res.json({done: true})
+			})
 		}else {
 			res.json({done: false, msg: "Invalid code!"})
 		}
