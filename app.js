@@ -69,5 +69,5 @@ app.get('/all', (req,res)=>{
 
 app.listen(port, function(err){
 	if(err) throw err
-	console.log('Running @ 8080')
+	console.log('Running @ '+port)
 })
