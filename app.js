@@ -10,7 +10,6 @@ const dbURI = 'mongodb://user:userman123@ds157256.mlab.com:57256/elite'
 mongoose.connect(dbURI,{
 	useNewUrlParser: true
 });
-mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error',function(err){
 	console.log(err);
