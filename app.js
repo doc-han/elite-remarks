@@ -5,12 +5,15 @@ const remarks = require('./remarkModel')
 const mongoose = require('mongoose')
 const uid = require('uid')
 const port = process.env.PORT || 8080
+const dbURI = 'mongodb://user:userman123@ds157256.mlab.com:57256/elite'
 
-mongoose.connect('mongodb://userman123:userman123@ds157256.mlab.com:57256/elite', { useNewUrlParser: true })
-const db = mongoose.connection
-
-db.on('error', function(error){
-	console.log(error)
+mongoose.connect(dbURI,{
+	useNewUrlParser: true
+});
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error',function(err){
+	console.log(err);
 })
 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -65,7 +68,7 @@ app.get('/all', (req,res)=>{
 	.catch(err=>res.json(err))
 })
 
-app.listen(8080, function(err){
+app.listen(port, function(err){
 	if(err) throw err
 	console.log('Running @ 8080')
 })
