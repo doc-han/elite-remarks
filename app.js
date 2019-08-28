@@ -9,7 +9,7 @@ const port = process.env.PORT || 8080
 mongoose.connect('mongodb://userman123:userman123@ds157256.mlab.com:57256/elite', { useNewUrlParser: true })
 const db = mongoose.connection
 
-db.on('error', function(){
+db.on('error', function(error){
 	console.log(error)
 })
 
