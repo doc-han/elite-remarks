@@ -59,7 +59,7 @@ app.get('/gen', (req,res)=>{
 		code: uid(8)
 	})
 	newCode.save()
-	res.json({done: true, msg: "Done with codes"})
+	res.json({done: true, msg: "Done with codes",code: newCode})
 })
 
 app.get('/all', (req,res)=>{
