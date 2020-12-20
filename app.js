@@ -5,7 +5,7 @@ const remarks = require('./remarkModel')
 const mongoose = require('mongoose')
 const uid = require('uid')
 const port = process.env.PORT || 8080
-const dbURI = 'mongodb://user:userman123@ds157256.mlab.com:57256/elite'
+const dbURI = 'mongodb+srv://user:userman123@elite.zoxym.mongodb.net/elite?retryWrites=true&w=majority'
 
 mongoose.connect(dbURI,{
 	useNewUrlParser: true
